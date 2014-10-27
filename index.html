@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6"><![endif]-->
+<!--[if IE 7 ]><html class="ie ie7"><![endif]-->
+<!--[if IE 8 ]><html class="ie ie8"><![endif]-->
+<!--[if IE 9 ]><html class="ie ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]>
+<!--> <html><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/style.css" />
+<!--[if IE]>
+<style>
+html {
+zoom: expression(function(ele){ele.style.zoom = "1";document.execCommand("BackgroundImageCache",false,true);}(this));
+}
+</style>
+<script>
+(function(){if(!/*@cc_on!@*/0)return;var e ="abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(','),i=e.length;while(i=i-1){document.createElement(e[i])}})()
+</script>
+<![endif]-->
+</head>
+<body>
+<!-- header begin -->
+<header>
+	<div class="tpl-nav">
+		<ul class="clearfix">
+			<li class="">首页</li>
+			<li class="">图书</li>
+			<li class="">报纸</li>
+			<li class="">工具书</li>
+			<li class="on">年鉴</li>
+			<li class="">图片</li>
+			<li class="">更多</li>
+		</ul>
+	</div>
+</header>
+<!-- header end--> 
+<!-- wrap begin -->
+<div id="wrap">
+	<!--检索-->
+	<div class="mod-sch">
+		<form action="">
+			<input type="text" autocomplete="off" class="txt-sch" value="输入地区" placeholder="输入地区" id="msgtxt1"onfocus="if (value =='输入地区'){value =''}" onblur="if (value ==''){ value='输入地区'}" />
+			<input type="text" autocomplete="off" class="txt-sch" value="输入统计方式" placeholder="输入统计方式" id="msgtxt1"onfocus="if (value =='输入统计方式'){value =''}" onblur="if (value ==''){ value='输入统计方式'}" />
+			<input type="text" autocomplete="off" class="txt-sch" value="输入统计指标" placeholder="输入统计指标" id="msgtxt1"onfocus="if (value =='输入统计指标'){value =''}" onblur="if (value ==''){ value='输入统计指标'}" />
+			<input type="text" autocomplete="off" class="txt-sch" value="输入时间" placeholder="输入时间" id="msgtxt1"onfocus="if (value =='输入时间'){value =''}" onblur="if (value ==''){ value='输入时间'}" />
+			<button type="submit" class="btn-sch">检  索</button>
+			<a href="advsearch?" class="btn-advsch"><strong>高级数据检索</strong></a>
+			<p class="tip-sch">！输入完整标准“地区”、“统计方式”、“指标”“年份”会提高您的检索速度和准确度</p>
+		</form>
+	</div>
+	<div class="lay clearfix">
+		<div class="lay-6">
+			<!--图表-->
+			<div class="mod-chart">
+				<img src="images/img_chart.png" alt="统计图"/>
+			</div>
+			<!--综合年鉴-->
+			<div class="mod-multiple">
+				<img src="images/img_multiple.png" alt="统计图"/>
+			</div>
+		</div>
+		<div class="lay-6">
+			<!--分析报告-->
+			<div class="mod-report">
+				<h3 class="list-hd">分析报告</h3>
+				<div class="tpl-list">
+					<ul class="list-bd">
+						<li>流通领域重要生产资料市场价格变动情况 <span class="fr">来源：商务部</span></li>
+						<li>50个城市主要食品平均价格变动情况<span class="fr">来源：商务部</span></li>
+						<li>2014年7月份社会消费品零售总额增长12.2%<span class="fr">来源：商务部</span></li>
+						<li>2014年1-7月份民间固定资产投资增长19.6%<span class="fr">来源：商务部</span></li>
+					</ul>
+				</div>
+			</div>
+			<!--Metro 风格贴-->
+			<div class="mod-metro clearfix">
+				<div class="fl metro-col-1">
+					<div class="metros1">最新数据</div>
+					<div class="metros2">
+						21.06%
+						<p>2014年1-7月份，全国固定资产投资</p>
+					</div>
+					<div class="metros3">
+						19.6%
+						<p>2014年1-7月份民间固定资产投资增长</p>
+					</div>
+				</div>
+				<div class="fl metro-col-2">
+					<div class="metros4">
+						<p>2014年全国早稻产量</p>
+						3401万吨
+					</div>
+					<div class="metros5">
+						20776
+						<p>2014年1-7月份，全国固定资产投资</p>
+					</div>
+				</div>
+				<div class="fl metro-col-3">
+					<div class="metros6">
+						0.9<i>%</i>
+						<p>2014年1-7月份固定资产投资增长</p>
+					</div>
+					<div class="metros7">
+						0.9<i>%</i>
+						<p>7月份规模以上工业增加值增长</p>
+					</div>
+
+				</div>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+</div>
+<!-- wrap end -->
+<!-- footer begin -->
+<footer >
+	<div id="footer"><p class="nav-foot"><a href="">关于</a><a href="">版权申明</a><a href="">意见建议</a><a href="">联系我们</a></p>
+	<p class="copyright">版权所有 北京方正阿帕比技术有限公司 京ICP证050487号</p>
+	<p class="nav-foottool"><a href="">繁体</a> | <a href="">English</a> | <a href="">微信书苑</a> | <a href="">软件下载</a>  | <a href="">帮助</a></p>
+	</div>
+	
+</footer>
+</body>
+</html>
