@@ -1,9 +1,19 @@
-﻿/* layout */
+﻿select {
+border: 1px solid darkgrey;
+line-height: 24px;
+height: 24px;
+width: 80px;
+margin: 5px 0 10px;
+}
+body {
+font-size: 12px;
+}
+/* layout */
 #wrap,header,footer {
 /* width: 1024px; */
 width: 1030px;
 margin: 0 auto;
-font-size: 14px;
+
 }
 .lay-6 {
 float: left;
@@ -11,6 +21,7 @@ width: 50%;
 /* background: url(../images/bg_r.png); */
 }
 /* layout end */
+
 /* footer */
 footer {
 font-size: 12px;
@@ -201,4 +212,159 @@ text-align: left;
 }
 .metro-col-3 i {
 font-size: 18px;
+}
+
+/*
+ * 高级检索页面
+ */
+/*  面包屑 */
+
+#dqwz {
+width: 972px;
+height: 22px;
+padding-left: 30px;
+line-height: 22px;
+margin: 0px auto;
+padding-top: 2px;
+margin-bottom: 5px;
+position: relative;
+color: #643120;
+
+text-align: left;
+margin-bottom: 5px;
+}
+#dqwz li {
+float: left;
+}
+#dqwz a {
+color: #643120;
+}
+#dqwz li a {
+color: #643120;
+}
+/*  */
+.mod-advsch {
+width: 1000px;
+height: 282px;
+margin: 0 auto;
+/* background: url(../images/bg_adv.png); */
+border: 1px solid #4f81bd;
+}
+.choose-cd {
+height: 73px;
+}
+/* 地区 */
+.choose-opt {
+float: left;
+width: 240px;
+height: 188px;
+padding: 10px;
+overflow: auto;
+border-right: 1px solid #4f81bd;
+}
+.choose-time {
+float: left;
+padding-left: 15px;
+padding-top: 15px;
+}
+.part-choosearea {
+margin: 9px -10px 7px;
+padding: 8px 10px 7px;
+border-top: 1px solid #a2bedf;
+border-bottom: 1px solid #a2bedf;
+}
+.btn-locate {
+display: inline-block;
+width: 50px;
+line-height: 25px;
+background: #4f81bd;
+color: #fff;
+text-align: center;
+cursor: pointer;
+}
+.btn-back {
+color: #999;
+font-size: 13px;
+padding-left: 22px;
+cursor: pointer;
+}
+.part-condition {
+padding-top: 6px;
+}
+.txt-sch-area {
+width: 162px;
+height: 18px;
+padding: 3px 8px 3px 8px;
+}
+.list-condition li {
+float: left;
+margin-right: 10px;
+line-height: 24px;
+}
+/* mod-index */
+.mod-index .part-choosearea {
+float: right;
+margin: 0;
+padding-right: 0;
+border: none;
+}
+.mod-index .part-back {
+float: left;
+padding: 14px 0 0 0;
+}
+.mod-index {
+width: 518px;
+}
+.mod-index h3 {
+padding: 9px 0;
+margin-top: -9px;
+text-indent: 18px;
+}
+.btn-time {
+display: inline-block;
+width: 50px;
+line-height: 25px;
+color: #fff;
+background: #4f81bd;
+text-align: center;
+float: right;
+cursor: pointer;
+}
+.tag-sch {
+display: inline-block;
+line-height: 25px;
+padding: 0 25px 0 10px;
+font-size: 13px;
+background: url(../images/btn_dell.png) 90% center #fff no-repeat;
+margin-bottom: 8px;
+}
+.choose-tt h2 {
+font-size: 14px;
+font-weight: 700;
+color: #fff;
+padding: 8px 0 5px;
+border-bottom: 1px solid #6b99d0;
+margin-bottom: 8px;
+}
+.area {
+float: left;
+padding: 0 8px;
+}
+.mod-area {
+width: 242px;
+background: #4f81bd;
+}
+.mod-indextt {
+width: 254px;
+background: #6599cf;
+border-right: 1px solid #a2bedf;
+}
+.mod-statictt {
+width: 254px;
+background: #6599cf;
+
+}
+.mod-timett {
+width: 184px;
+background: #4f81bd;
 }
