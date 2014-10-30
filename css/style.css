@@ -469,7 +469,7 @@ font-weight: 700;
 color: #4f81bd;
 line-height: 30px;
 border-bottom: 1px solid #4f81bd;
-
+font-size: 14px;
 }
 .btn-dt-close {
 float: right;
@@ -489,4 +489,151 @@ background-position: 0 -119px;
 }
 .icon-statistics {
 background-position: 0 -159px;
+}
+
+/* static */
+.mod-static {
+height: 394px;
+padding: 30px 0 0 36px;
+border: 1px solid #ccc;
+}
+.list-staticthub li {
+float: left;
+width: 60px;
+height: 60px;
+margin-right: 20px;
+/* border: 1px solid #aec1d8; */
+background-image: url(../images/icon_bar.png);
+background-repeat: no-repeat;
+cursor: pointer;
+}
+.static-hbar {
+background-position: -78px 0;
+}
+.static-pie {
+background-position: -156px 0;
+}
+.static-line {
+background-position: -234px 0;
+}
+
+.on.static-bar {
+background-position: 0 -78px;
+}
+.on.static-hbar {
+background-position: -78px -78px;
+}
+.on.static-pie {
+background-position: -156px -78px;
+}
+.on.static-line {
+background-position: -234px -78px;
+}
+
+.statci-con {
+width: 606px;
+height: 380px;
+border: 1px solid #cccccc;
+}
+.list-staticthub {
+margin-bottom: 30px;
+}
+.static-tip {
+margin-bottom: 30px;
+}
+.static-tip-tt {
+display: inline-block;
+width: 78px;
+}
+.static-tip .fm-spe {
+margin-left: 40px;
+}
+.mod-static .mod-btns {
+background: #fff;
+}
+.btn-createbar {
+display: inline-block;
+width: 100px;
+line-height: 30px;
+text-align: center;
+border: none;
+color: #fff;
+background: #4f81bd;
+margin-right: 6px;
+}
+.btn-f5 {
+display: inline-block;
+width: 30px;
+line-height: 30px;
+text-align: center;
+border: none;
+color: #fff;
+background-color: #4f81bd;
+background-image: url(../images/btn_f5.png);
+text-indent: -999em;
+}
+.mod-switchunit {
+width: 450px;
+height: 244px;
+background: url(../images/bg_unit.png);
+}
+.mod-switchunit h4 {
+line-height: 28px;
+font-size: 14px;
+}
+.switchunit-con {
+padding-top: 50px;
+padding-left: 13px;
+font-size: 14px;
+}
+.index-tt {
+display: inline-block;
+width: 232px;
+}
+.index-name,.index-unit {
+height: 30px;
+line-height: 30px;
+margin: 6px 0 6px;
+width: 196px;
+border: 1px solid darkgrey;
+}
+.index-unit {
+width: 170px;
+}
+.btn-switchunit {
+display: inline-block;
+width: 60px;
+line-height: 30px;
+text-align: center;
+border: none;
+color: #fff;
+background-color: #4f81bd;
+font-size: 12px;
+cursor: pointer;
+}
+.mod-switchunit .mod-btns {
+margin-top: 48px;
+padding-right: 20px;
+margin-bottom: 10px;
+background: #fff;
+text-align: right;
+}
+.cordinate-con .mod-btns {
+margin-top: 20px;
+}
+.cordinate-con {
+padding-top: 20px;
+padding-top: 15px;
+padding-left: 13px;
+/* font-size: 14px; */
+}
+.fm-slct {
+width: 120px;
+height: 30px;
+line-height: 30px;
+margin-right: 10px;
+}
+.tip-cordinate {
+margin-top: -10px;
+margin-bottom: 5px;
 }
