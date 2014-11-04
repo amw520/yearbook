@@ -53,6 +53,22 @@ width: 35%;
 color: #ccc;
 margin: 0 8px;
 }
+/* footer end */
+/* 切换 */
+.mod-tab .tab-item {
+float: left;
+width: 50%;
+line-height: 34px;
+text-align: center;
+font-size: 14px;
+font-weight: 700;
+border-bottom: 1px solid #e1e1e1;
+background: #ededed;
+color: #333;
+}
+.mod-tab .on {
+background: #fff;
+}
 /* mod-sch */
 .mod-sch {
 position: relative;
@@ -92,10 +108,15 @@ color: #dc8657;
 padding: 10px;
 background: #f5f5f5;
 border-top: 1px solid #e1e1e1;
+overflow: hidden;
+}
+.mod-chart img {
+width: 480px;/*todo*/
 }
 /* mod-multiple */
 .mod-multiple {
 border: 1px solid #bdc0c3;
+overflow: hidden;
 }
 /* mod-report */
 .mod-report {
@@ -143,11 +164,11 @@ background: #76ace3;
 }
 
 .metro-col-1 {
-width: 158px;
+width: 152px;
 margin-right: 2px;
 }
 .metro-col-2 {
-width: 190px;
+width: 180px;
 margin-right: 2px;
 }
 .metro-col-3 {
@@ -184,6 +205,7 @@ font-size: 36px;
 background: #80b2e6;
 padding: 18px 15px 21px 15px;
 margin-bottom: 2px;
+white-space: nowrap;
 }
 .metros5 {
 color: #fff;
