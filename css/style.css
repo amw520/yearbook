@@ -13,7 +13,7 @@ font-size: 12px;
 /* width: 1024px; */
 width: 1000px;
 margin: 0 auto;
-
+padding: 0;
 }
 .lay-6 {
 float: left;
@@ -100,7 +100,7 @@ color: #dc8657;
 .tip-sch {
 position: absolute;
 top: 70px;
-left: 138px;
+left: 56px;
 color: #dc8657;
 }
 /* mod-chart */
@@ -403,8 +403,8 @@ text-align: center;
 display: inline-block;
 width: 100px;
 line-height: 25px;
-background: #4f81bd;
-color: #fff;
+/* background: #4f81bd;
+color: #fff; */
 text-align: center;
 cursor: pointer;
 }
@@ -658,4 +658,20 @@ margin-right: 10px;
 .tip-cordinate {
 margin-top: -10px;
 margin-bottom: 5px;
+}
+/* 添加导航 */
+.mod-tab {width: 1000px;margin: 0 auto;}
+.mod-tab .tab-item {
+float: left;
+width: 50%;
+line-height: 34px;
+text-align: center;
+font-size: 14px;
+font-weight: 700;
+border-bottom: 1px solid #e1e1e1;
+background: #ededed;
+color: #333;
+}
+.mod-tab .on {
+background: #fff;
 }
