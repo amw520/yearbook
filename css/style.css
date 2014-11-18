@@ -5,6 +5,10 @@ height: 24px;
 width: 80px;
 margin: 5px 0 10px;
 }
+input {
+vertical-align: -2px;
+margin-right: 5px;
+}
 body {
 font-size: 12px;
 }
@@ -55,24 +59,29 @@ margin: 0 8px;
 }
 /* footer end */
 /* 切换 */
+.mod-tab {
+width: 1000px;
+margin: 0 auto;
+}
 .mod-tab .tab-item {
 float: left;
 width: 50%;
 line-height: 34px;
 text-align: center;
 font-size: 14px;
-font-weight: 700;
+
 border-bottom: 1px solid #e1e1e1;
 background: #ededed;
 color: #333;
 }
 .mod-tab .on {
+font-weight: 700;
 background: #fff;
 }
 /* mod-sch */
 .mod-sch {
 position: relative;
-padding: 26px 0 40px;
+padding: 25px 0 40px;
 margin-bottom: 12px;
 border: 1px solid #e5ecf3;
 border-left-width: 0;
@@ -81,9 +90,11 @@ text-align: center;
 
 }
 .txt-sch {
+width: 120px;
 padding: 8px;
 margin-right: 6px;
 border: 1px solid #aec1d8;
+font-size: 14px;
 }
 .btn-sch {
 width: 100px;
@@ -93,6 +104,7 @@ border: none;
 color: #fff;
 background: #4f81bd;
 margin-right: 6px;
+font-size: 14px;
 }
 .btn-advsch {
 color: #dc8657;
@@ -100,7 +112,7 @@ color: #dc8657;
 .tip-sch {
 position: absolute;
 top: 70px;
-left: 56px;
+left: 100px;
 color: #dc8657;
 }
 /* mod-chart */
@@ -131,6 +143,7 @@ list-style: disc;
 padding-left: 10px;
 line-height: 2;
 font-size: 14px;
+white-space: nowrap;
 }
 .list-hd {
 margin-top: 10px;
@@ -309,6 +322,7 @@ color: #999;
 font-size: 13px;
 padding-left: 22px;
 cursor: pointer;
+background: url(../images/icon_back.png) no-repeat;
 }
 .part-condition {
 padding-top: 6px;
@@ -337,10 +351,22 @@ padding: 14px 0 0 0;
 .mod-index {
 width: 518px;
 }
-.mod-index h3 {
-padding: 9px 0;
-margin-top: -9px;
+.nav-index-box {
 text-indent: 18px;
+background: #ecf2f9;
+margin: -10px;
+}
+
+.nav-index {
+float: left;
+width: 33%;
+border-left: 1px solid #a2bedf;
+border-bottom: 1px solid #a2bedf;
+padding: 9px 0;
+}
+.nav-index.on {
+background: #fff;
+border-bottom: 1px solid #fff;
 }
 .btn-time {
 display: inline-block;
@@ -376,11 +402,11 @@ float: left;
 padding: 0 8px;
 }
 .mod-area {
-width: 242px;
+width: 245px;
 background: #4f81bd;
 }
 .mod-indextt {
-width: 254px;
+width: 252px;
 background: #6599cf;
 border-right: 1px solid #a2bedf;
 }
@@ -399,14 +425,21 @@ padding: 4px 0;
 background: #ecf2f9;
 text-align: center;
 }
-.btn-advsch {
-display: inline-block;
-width: 100px;
-line-height: 25px;
+.btn-advsch {/* 高级检索 */
+
+
 /* background: #4f81bd;
 color: #fff; */
 text-align: center;
 cursor: pointer;
+font-size: 14px;
+}
+.mod-btns .btn-advsch { 
+display: inline-block;
+width: 100px;
+line-height: 25px;
+color: #fff;
+background: #4f81bd;
 }
 
 .mod-extend {
@@ -420,6 +453,13 @@ line-height: 25px;
 font-size: 14px;
 color: #fff;
 cursor: pointer;
+background: url(../images/icon_updown.png) no-repeat;
+}
+.btn-extend {
+background-position: 6px -46px;
+}
+.btn-extend.on {
+background-position: 6px -5px;
 }
 .mod-extend.on {
 margin-top: 1px;
@@ -443,6 +483,7 @@ background-color: #4f81bd;
 color: #fff;
 cursor: pointer;
 }
+
 .mod-rsset {
 float: left;
 position: relative;
@@ -500,6 +541,7 @@ height: 30px;
 background: url(../images/btn_dt_close.png) center no-repeat;
 cursor: pointer;
 }
+.icon-calc {}
 .icon-unit {
 background-position: 0 -38px;
 }
@@ -561,11 +603,15 @@ border: 1px solid #cccccc;
 margin-bottom: 30px;
 }
 .static-tip {
-margin-bottom: 30px;
+margin-bottom: 20px;
 }
 .static-tip-tt {
 display: inline-block;
-width: 78px;
+width: 88px;
+font-family: Microsoft YaHei;
+}
+.statci-opt select {
+width: 180px;
 }
 .static-tip .fm-spe {
 margin-left: 40px;
@@ -593,6 +639,10 @@ color: #fff;
 background-color: #4f81bd;
 background-image: url(../images/btn_f5.png);
 text-indent: -999em;
+margin-left: 40px;
+}
+.hidechart {
+margin-left: 20px;
 }
 .mod-switchunit {
 width: 450px;
@@ -649,6 +699,10 @@ padding-top: 15px;
 padding-left: 13px;
 /* font-size: 14px; */
 }
+.cordinate-con p {
+font-size: 14px; /* todo */
+}
+
 .fm-slct {
 width: 120px;
 height: 30px;
@@ -659,7 +713,7 @@ margin-right: 10px;
 margin-top: -10px;
 margin-bottom: 5px;
 }
-/* 添加导航 */
+/* 添加导航
 .mod-tab {width: 1000px;margin: 0 auto;}
 .mod-tab .tab-item {
 float: left;
@@ -667,11 +721,12 @@ width: 50%;
 line-height: 34px;
 text-align: center;
 font-size: 14px;
-font-weight: 700;
+
 border-bottom: 1px solid #e1e1e1;
 background: #ededed;
 color: #333;
 }
 .mod-tab .on {
+font-weight: 700;
 background: #fff;
-}
+} */
