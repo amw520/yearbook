@@ -510,6 +510,13 @@ border-bottom: 2px solid #f0f2f4;
 .tb-datadt {
 position: absolute;
 }
+/* 指标解释弹出 */
+.mod-indexdescribe {
+width: 260px;
+}
+.mod-indexdescribe .mod-btns {
+background: #fff;
+}
 .mod-datadt {
 padding:  0 10px;
 text-align: left;
@@ -713,20 +720,28 @@ margin-right: 10px;
 margin-top: -10px;
 margin-bottom: 5px;
 }
-/* 添加导航
-.mod-tab {width: 1000px;margin: 0 auto;}
-.mod-tab .tab-item {
-float: left;
-width: 50%;
-line-height: 34px;
-text-align: center;
+/* 检索下拉 */
+.sitem {
+position: absolute;
+background: white;
+border: 1px solid #D9D9D9;
+width: 136px;
 font-size: 14px;
-
-border-bottom: 1px solid #e1e1e1;
-background: #ededed;
-color: #333;
+color: #6d767b;
+left: 109px;
+top: 60px;
+z-index: 999;
+text-align: left;
 }
-.mod-tab .on {
-font-weight: 700;
-background: #fff;
-} */
+.sitem a {
+display: inline-block;
+width: 100%;
+height: 28px;
+text-indent: 10px;
+color: #6d767b;
+line-height: 32px;
+font-size: 14px;
+}
+.sitem a:hover{
+background: #ebf0f7;
+}
