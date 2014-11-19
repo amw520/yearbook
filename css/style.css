@@ -19,6 +19,9 @@ width: 1000px;
 margin: 0 auto;
 padding: 0;
 }
+#wrap {
+padding-bottom: 20px;
+}
 .lay-6 {
 float: left;
 width: 50%;
@@ -87,7 +90,7 @@ border: 1px solid #e5ecf3;
 border-left-width: 0;
 border-right-width: 0;
 text-align: center;
-
+border-top: none;
 }
 .txt-sch {
 width: 120px;
@@ -112,7 +115,7 @@ color: #dc8657;
 .tip-sch {
 position: absolute;
 top: 70px;
-left: 100px;
+left: 114px;
 color: #dc8657;
 }
 /* mod-chart */
@@ -144,6 +147,19 @@ padding-left: 10px;
 line-height: 2;
 font-size: 14px;
 white-space: nowrap;
+}
+.list-bd li {
+list-style: disc;
+padding-left: 10px;
+line-height: 2;
+font-size: 14px;
+white-space: nowrap;
+}
+.list-bd li a {
+color: #333;
+}
+.list-bd li a:hover {
+color: #4f81bd;
 }
 .list-hd {
 margin-top: 10px;
@@ -400,6 +416,7 @@ border-bottom: 1px solid #a2bedf;
 .area {
 float: left;
 padding: 0 8px;
+margin: 0;/* 重复 */
 }
 .mod-area {
 width: 245px;
@@ -725,7 +742,7 @@ margin-bottom: 5px;
 position: absolute;
 background: white;
 border: 1px solid #D9D9D9;
-width: 136px;
+min-width: 136px;
 font-size: 14px;
 color: #6d767b;
 left: 109px;
@@ -744,4 +761,7 @@ font-size: 14px;
 }
 .sitem a:hover{
 background: #ebf0f7;
+}/* 检索列表结束 */
+.mod-schresult {
+margin-bottom: 15px;/* 页面间距 */
 }
