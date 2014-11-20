@@ -60,13 +60,16 @@ zoom: expression(function(ele){ele.style.zoom = "1";document.execCommand("Backgr
 	</div>
 	<div class="mod-sch">
 		<form action="">
-			<input type="text" autocomplete="off" class="txt-sch" value="输入地区" placeholder="输入地区" id="msgtxt1"onfocus="if (value =='输入地区'){value =''}" onblur="if (value ==''){ value='输入地区'}" />
-			<input type="text" autocomplete="off" class="txt-sch" value="输入统计方式" placeholder="输入统计方式" id="msgtxt1"onfocus="if (value =='输入统计方式'){value =''}" onblur="if (value ==''){ value='输入统计方式'}" />
-			<input type="text" autocomplete="off" class="txt-sch" value="输入统计指标" placeholder="输入统计指标" id="msgtxt1"onfocus="if (value =='输入统计指标'){value =''}" onblur="if (value ==''){ value='输入统计指标'}" />
-			<input type="text" autocomplete="off" class="txt-sch" value="输入时间" placeholder="输入时间" id="msgtxt1"onfocus="if (value =='输入时间'){value =''}" onblur="if (value ==''){ value='输入时间'}" />
-			<button type="submit" class="btn-sch">检  索</button>
+			<input type="text" autocomplete="off" class="txt-sch" value="输入地区" placeholder="输入地区" id="key_area"onfocus="if (value =='输入地区'){value =''}" onblur="if (value ==''){ value='输入地区'}" />
+			<input type="text" autocomplete="off" class="txt-sch" value="输入统计方式" placeholder="输入统计方式" id="key_static"onfocus="if (value =='输入统计方式'){value =''}" onblur="if (value ==''){ value='输入统计方式'}" />
+			<input type="text" autocomplete="off" class="txt-sch" value="输入统计指标" placeholder="输入统计指标" id="key_index"onfocus="if (value =='输入统计指标'){value =''}" onblur="if (value ==''){ value='输入统计指标'}" />
+			<input type="text" autocomplete="off" class="txt-sch" value="输入时间" placeholder="输入时间" id="key_date"onfocus="if (value =='输入时间'){value =''}" onblur="if (value ==''){ value='输入时间'}" />
+			<button type="button" class="btn-sch" onclick="return yearbook.search();">检&nbsp;&nbsp;&nbsp;&nbsp;索</button>
 			<a href="advsearch?" class="btn-advsch"><strong>高级数据检索</strong></a>
 			<p class="tip-sch">！输入完整标准“地区”、“统计方式”、“指标”“年份”会提高您的检索速度和准确度</p>
+			<div class="sitem dn" id="dotcon_searchtylist" style="display: none;">
+                <p><a href="javascript:void(0);" data-value="bj" class="emt-schlist dn">加载中...</a></p>
+            </div>
 		</form>
 	</div>
 	<div class="lay clearfix">
@@ -86,10 +89,10 @@ zoom: expression(function(ele){ele.style.zoom = "1";document.execCommand("Backgr
 				<h3 class="list-hd">分析报告</h3>
 				<div class="tpl-list">
 					<ul class="list-bd">
-						<li>流通领域重要生产资料市场价格变动情况 <span class="fr">来源：商务部</span></li>
-						<li>50个城市主要食品平均价格变动情况<span class="fr">来源：商务部</span></li>
-						<li>2014年7月份社会消费品零售总额增长12.2%<span class="fr">来源：商务部</span></li>
-						<li>2014年1-7月份民间固定资产投资增长19.6%<span class="fr">来源：商务部</span></li>
+						<li><a href="">流通领域重要生产资料市场价格变动情况 <span class="fr">来源：商务部</span></a></li>
+						<li><a href="">50个城市主要食品平均价格变动情况<span class="fr">来源：商务部</span></a></li>
+						<li><a href="">2014年7月份社会消费品零售总额增长12.2%<span class="fr">来源：商务部</span></a></li>
+						<li><a href="">2014年1-7月份民间固定资产投资增长19.6%<span class="fr">来源：商务部</span></a></li>
 					</ul>
 				</div>
 			</div>
@@ -153,6 +156,8 @@ zoom: expression(function(ele){ele.style.zoom = "1";document.execCommand("Backgr
 				</p>
 		</footer>
 		<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
-		<script type="text/javascript" src="js/searchlist.js"></script>
+		<script type="text/javascript" src="js/dot/dot.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/searchresult.js"></script>
 </body>
 </html>
