@@ -98,6 +98,7 @@ padding: 8px;
 margin-right: 6px;
 border: 1px solid #aec1d8;
 font-size: 14px;
+vertical-align: 0;
 }
 .btn-sch {
 width: 100px;
@@ -764,4 +765,10 @@ background: #ebf0f7;
 }/* 检索列表结束 */
 .mod-schresult {
 margin-bottom: 15px;/* 页面间距 */
+}
+.tip-highlight {
+border: 1px solid #f00;
+}
+.tb-rs td:hover {
+    color: #4f81bd;
 }
