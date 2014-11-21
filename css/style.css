@@ -772,3 +772,38 @@ border: 1px solid #f00;
 .tb-rs td:hover {
     color: #4f81bd;
 }
+/* 添加选取指标 */
+.mod-seltp .mod-datadt h4 {
+margin: 0 -30px;
+}
+.mod-seltp .tag-sch{
+border: 1px solid #bbbbbb;
+margin-right: 5px;
+background: none;
+cursor: pointer;
+}
+.mod-seltp .tag-sch:hover {
+border: 1px solid #e1976f;
+color: #e1976f;
+}
+.mod-seltp .mod-datadt {
+padding: 0 30px;
+}
+.fm-tag {
+float: left;
+width: 50%;
+}
+.seltp-rout {
+padding: 15px 0 10px;
+}
+.seltp-rout span {
+margin-left: 8px;
+margin-right: 8px;
+}
+.mod-seltp .mod-btns {
+background: #fff;
+text-align: right;
+}
+.fm-tag input {
+margin-right: 10px;
+}
