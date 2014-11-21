@@ -76,7 +76,8 @@ zoom: expression(function(ele){ele.style.zoom = "1";document.execCommand("Backgr
 		<div class="lay-6">
 			<!--图表-->
 			<div class="mod-chart">
-				<img src="images/img_chart.png" alt="统计图"/>
+				<!-- <img src="images/img_chart.png" alt="统计图"/> -->
+				<div class="mod-3dview" id="divRightColumn"></div>
 			</div>
 			<!--综合年鉴-->
 			<div class="mod-multiple">
@@ -157,7 +158,11 @@ zoom: expression(function(ele){ele.style.zoom = "1";document.execCommand("Backgr
 		</footer>
 		<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
 		<script type="text/javascript" src="js/dot/dot.js"></script>
-		<script type="text/javascript" src="js/index.js"></script>
+		<!-- <script type="text/javascript" src="js/index.js"></script> -->
 		<script type="text/javascript" src="js/searchresult.js"></script>
+		<!-- 图表 -->
+		<script type="text/javascript" src="js/visual/FusionCharts/FusionCharts.js"></script>
+		<script type="text/javascript" src="js/visual/FusionCharts/FusionCharts.jqueryplugin.js"></script>
+		<script type="text/javascript" src="js/visual/yearbookchart.js"></script>
 </body>
 </html>
