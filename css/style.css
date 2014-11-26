@@ -351,8 +351,21 @@ padding: 3px 8px 3px 8px;
 }
 .list-condition li {
 float: left;
-margin-right: 10px;
+width: 30%;
+/* margin-right: 10px; */
 line-height: 24px;
+}
+/* 多种形式 */
+.list-condition .tag-sch{
+border: 1px solid #bbbbbb;
+margin-right: 5px;
+background: none;
+cursor: pointer;
+padding: 0 15px 0 10px;
+}
+.list-condition .tag-sch:hover {
+border: 1px solid #e1976f;
+color: #e1976f;
 }
 /* mod-index */
 .mod-index .part-choosearea {
