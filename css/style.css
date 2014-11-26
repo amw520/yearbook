@@ -777,6 +777,7 @@ font-size: 14px;
 background: #ebf0f7;
 }/* 检索列表结束 */
 .mod-schresult {
+position: relative;
 margin-bottom: 15px;/* 页面间距 */
 }
 .tip-highlight {
@@ -819,4 +820,30 @@ text-align: right;
 }
 .fm-tag input {
 margin-right: 10px;
+}
+/* 高级计算 */
+.list-advcalc  li {
+min-width: 138px;
+line-height: 30px;
+text-indent: 15px;
+border-top: 1px solid #6599cf;
+cursor: pointer;
+}
+.list-advcalc  li:hover,.list-advcalc  .on {
+background: #ecf2f9;
+}
+.sub-modadvcalc {
+position: absolute;
+left: 138px;
+background: #fff;
+border: 1px solid #6599cf;
+top: -1px;
+}
+.mod-advcalc {
+position: absolute;
+border: 1px solid #6599cf;
+top: 10px;
+left: 130px;
+background: #fff;
+z-index: 2;
 }
