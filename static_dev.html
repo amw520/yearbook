@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>高级检索</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	
+		<!--[if IE]>
+		<style>
+		html {
+		zoom: expression(function(ele){ele.style.zoom = "1";document.execCommand("BackgroundImageCache",false,true);}(this));
+		}
+		</style>
+		<script>
+		(function(){if(!/*@cc_on!@*/0)return;var e ="abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(','),i=e.length;while(i=i-1){document.createElement(e[i])}})()
+		</script>
+		<![endif]-->
+	</head>
+	<body>
+		<!-- header begin -->
+		<header>
+			<div class="tpl-nav">
+				<ul class="clearfix">
+					<li class="">首页</li>
+					<li class="">图书</li>
+					<li class="">报纸</li>
+					<li class="">工具书</li>
+					<li class="on">年鉴</li>
+					<li class="">图片</li>
+					<li class="">更多</li>
+				</ul>
+			</div>
+		</header>
+		<!-- header end--> 
+		<!-- 面包屑 -->
+		<div id="dqwz">
+			<ul>
+				<li>
+					<a id="aUsp" href="HTTP://www.apabi.com/tiyan/?cult=CN">中华数字书苑</a>&gt;
+					<a href="?pid=yearbook.index">年鉴</a>&gt;
+					<a href="?pid=yearbook.index">统计数据</a>&gt;
+					生成统计表
+				</li>
+			</ul>
+		</div>
+		<!-- wrap begin -->
+		<div id="wrap">
+			<div class="mod-static clearfix">
+				<div class="statci-opt fl">
+					<ul class="list-staticthub clearfix">
+						<li class="static-bar on" data-type="column"></li>
+						<li class="static-hbar" data-type="bar"></li>
+						<li class="static-pie" data-type="pie"></li>
+						<li class="static-line" data-type="line"></li>
+					</ul>
+					<input type="hidden" value="bar" id="chartype">
+					<div class="static-tip">
+						<label for="" class="static-tip-tt">图表标题：</label>
+						<input type="text" autocomplete="off" class="txt-sch txt-sch-area" value="标题名称" placeholder="标题名称" id="msgtxt1"onfocus="if (value =='标题名称'){value =''}" onblur="if (value ==''){ value='标题名称'}" />
+					</div>
+					<div class="">
+						<label for="" class="static-tip-tt">分类：</label>
+						<select id="js_char_type">
+						  <option value ="area">地区</option>
+						  <option value ="date">时间</option>
+						  <option value ="class">统计方式</option>
+						  <option value ="indicator">指标</option>
+						</select>
+
+					</div>
+					<div class="dn">
+						<label for="" class="static-tip-tt">坐标－分类：</label>
+						<select id="js_type_index">
+						  <option value ="volvo">地区－时间</option>
+						  <option value ="volvo">统计方式－时间</option>
+						  <option value ="volvo">统计方式－地点</option>
+						</select>
+
+					</div>
+					<div class="dn">
+						<h3 class="selindextt">坐标</h3>
+						<div class="mod-selindex clearfix">
+							<div class="index-box js_chart_orgin"></div>
+							<div class="index-action">
+								<span class="btn-pushindex"></span>
+								<span class="btn-pullindex"></span>
+							</div>
+							<div class="index-box js_chart_tar"></div>
+						</div>
+					</div>
+					<div class="">
+						<h3 class="selindextt">分类：</h3>
+						<div class="mod-selindex clearfix">
+							<div class="index-box"></div>
+							<div class="index-action">
+								<span class="btn-pushindex"></span>
+								<span class="btn-pullindex"></span>
+							</div>
+							<div class="index-box"></div>
+						</div>
+					</div>
+					<div class="">
+						<label for="" class="static-tip-tt">固定项：</label>
+						<select id="js_opt0">
+						  <option value ="volvo">中国</option>
+						  <option value ="volvo">2009</option>
+						  <option value ="volvo">2008</option>
+						</select>
+					</div>
+					<div class="">
+						<label for="" class="static-tip-tt"> </label>
+						<select id="js_opt1">
+						  <option value ="volvo">2010</option>
+						  <option value ="volvo">2009</option>
+						  <option value ="volvo">2008</option>
+						</select>
+					</div>
+					<div class="">
+						<label for="" class="static-tip-tt"> </label>
+						<select id="js_opt2">
+						  <option value ="volvo">2010</option>
+						  <option value ="volvo">2009</option>
+						  <option value ="volvo">2008</option>
+						</select>
+					</div>
+					<div class="static-tip">
+						<label for="" class="static-tip-tt vh"></label>
+						<input type="checkbox" name="dongcheng" class="fm-chkbox " /><label for="" class="">隐藏数据标签</label> 
+						<input type="checkbox" name="dongcheng" class="fm-chkbox hidechart" /><label for="" class="">隐藏图例</label>
+					</div>
+					<div class="static-tip">
+						<label for="" class="static-tip-tt vh"></label>
+						<span class="btn-createbar">生成图表</span>
+						<span class="btn-f5">重置</span>
+					</div>
+
+				</div>
+				<div class="statci-con fl">
+					<!-- 生成图表 -->
+					<div class="mod-3dview" id="divRightColumn">
+						
+					</div>
+				
+				</div>
+			</div>
+		
+		</div>
+		<!-- wrap end -->
+		<!-- footer begin -->
+		<footer class="clearfix">
+				<p class="nav-foot">
+					<a href="">关于</a>
+					<a href="">版权申明</a>
+					<a href="">意见建议</a>
+					<a href="">联系我们</a>
+				</p>
+				<p class="copyright">版权所有 北京方正阿帕比技术有限公司 京ICP证050487号</p>
+				<p class="nav-foottool">
+					<a href="">繁体</a> | 
+					<a href="">English</a> | 
+					<a href="">微信书苑</a> | 
+					<a href="">软件下载</a>  | 
+					<a href="">帮助</a>
+				</p>
+		</footer>
+		<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+		<script type="text/javascript" src="js/dot/dot.js"></script>
+		<!-- <script type="text/javascript" src="js/index.js"></script> -->
+		<script type="text/javascript" src="js/searchresult.js"></script>
+		<!-- 图表 -->
+		<script type="text/javascript" src="js/visual/FusionCharts/FusionCharts.js"></script>
+		<script type="text/javascript" src="js/visual/FusionCharts/FusionCharts.jqueryplugin.js"></script>
+		<script type="text/javascript" src="js/visual/chart_data.js"></script>
+
+		<script type="text/javascript" src="js/visual/yearbookchart.js"></script>
+
+	</body>
+</html>
