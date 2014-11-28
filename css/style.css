@@ -345,7 +345,7 @@ background: url(../images/icon_back.png) no-repeat;
 padding-top: 6px;
 }
 .txt-sch-area {
-width: 162px;
+width: 140px;/* 滚动条宽 */
 height: 18px;
 padding: 3px 8px 3px 8px;
 }
@@ -354,6 +354,9 @@ float: left;
 width: 30%;
 /* margin-right: 10px; */
 line-height: 24px;
+}
+.choose-area .list-condition li {
+width: auto;
 }
 /* 多种形式 */
 .list-condition .tag-sch{
@@ -415,6 +418,7 @@ padding: 0 25px 0 10px;
 font-size: 13px;
 background: url(../images/btn_dell.png) 90% center #fff no-repeat;
 margin-bottom: 8px;
+cursor: pointer;
 }
 .choose-tt h2 {
 font-size: 14px;
@@ -521,11 +525,12 @@ position: relative;
 width: 858px;
 height: 363px;
 border: 1px solid #ddd;
-overflow: auto;
+overflow: scroll;
 
 }
 .tb-rs {
-width: 100%;
+min-width: 100%;
+table-layout: fixed;
 font-size: 14px;
 line-height: 35px;
 text-align: center;
@@ -595,9 +600,10 @@ background-position: 0 -159px;
 
 /* static */
 .mod-static {
-height: 394px;
+height: 545px;
 padding: 30px 0 0 36px;
 border: 1px solid #ccc;
+margin-bottom: 20px;
 }
 .list-staticthub li {
 float: left;
@@ -620,21 +626,21 @@ background-position: -234px 0;
 }
 
 .on.static-bar {
-background-position: 0 -78px;
+background-position: 0 -79px;
 }
 .on.static-hbar {
-background-position: -78px -78px;
+background-position: -78px -79px;
 }
 .on.static-pie {
-background-position: -156px -78px;
+background-position: -156px -79px;
 }
 .on.static-line {
-background-position: -234px -78px;
+background-position: -234px -79px;
 }
 
 .statci-con {
-width: 606px;
-height: 380px;
+width: 610px;
+height: 500px;
 border: 1px solid #cccccc;
 }
 .list-staticthub {
@@ -649,7 +655,7 @@ width: 88px;
 font-family: Microsoft YaHei;
 }
 .statci-opt select {
-width: 180px;
+width: 214px;
 }
 .static-tip .fm-spe {
 margin-left: 40px;
@@ -666,6 +672,7 @@ border: none;
 color: #fff;
 background: #4f81bd;
 margin-right: 6px;
+cursor: pointer;
 }
 .btn-f5 {
 display: inline-block;
@@ -675,9 +682,10 @@ text-align: center;
 border: none;
 color: #fff;
 background-color: #4f81bd;
-background-image: url(../images/btn_f5.png);
-text-indent: -999em;
+/* background-image: url(../images/btn_f5.png); */
+/* text-indent: -999em; */
 margin-left: 40px;
+cursor: pointer;
 }
 .hidechart {
 margin-left: 20px;
@@ -846,4 +854,35 @@ top: 10px;
 left: 130px;
 background: #fff;
 z-index: 2;
+}
+
+/* 生成图修改 */
+.index-box {
+float: left;
+width: 120px;
+height: 70px;
+border: 1px solid #dbdbdb;
+overflow-y: scroll;
+}
+.selindextt {
+font-family: Microsoft YaHei;
+}
+.index-action {
+float: left;
+width: 40px;
+padding: 10px;
+text-align: center;
+}
+.btn-pushindex,.btn-pullindex {
+display: inline-block;
+width: 30px;
+height: 20px;
+line-height: 20px;
+cursor: pointer;
+background: url(../images/btn_index.png) no-repeat #4f81bd;
+background-position: 9px 5px;
+}
+.btn-pullindex {
+margin-top: 10px;
+background-position: 9px -25px;
 }
