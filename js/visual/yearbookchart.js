@@ -14,9 +14,9 @@
 					var optoin={
 					"type":yearbook.charType,
 					"container":$("#divRightColumn"),
-					//"data": yearbook.d2bar
+					"data": yearbook.d2bar
 					//"data" : yearbook.tw
-					"data" : yearbook.twbar
+					//"data" : yearbook.twbar
 					//"data" : d4
 			}
 			createChart(optoin);
@@ -89,4 +89,80 @@ function createChart(option) {
 		width: w,
 		height: h
 	});
+}
+/*
+** 生成条件
+**根据提供数据生成页面分类条件
+**@para {string}orginData 生成图的各类
+**@para {string}container 生成图的容器
+*/
+var chartData={"chart": {
+      "caption": "Monthly revenue for last year",
+      "subCaption": "Harry's SuperMart",
+      "xAxisName": "Month",
+      "yAxisName": "Revenues (In USD)",
+      "numberPrefix": "$",
+      "theme": "fint"
+   },"data":[]};
+function createContion(orginData){
+	//判断格式，不满足退出
+	if(!orginData){
+		return false;
+	}
+	var data=[];
+	var schtp=["area","date","class","indicator"];
+	var type=$("#js_char_type").val();
+		schtp.splice(type,1);
+	var str="";
+	//横坐标
+	for(var i=0,j=orginData[type];i<j.length;i++){
+		str+='<option value="'+(i<10?("0"+i):i)+'">+'j[i].value'+</option>';
+		chartData["data"][i]["label"]=j[i].value;
+	}
+	//chartData["data"]=data;
+	$(".js_chart_orgin").html(str);
+	//固定项
+	for(var k=0;k<schtp.length;k++){
+		for(var m=0,n=schtp[k];m<n.length;m++){
+			str+='<p data-value="'+(m<10?("0"+m):m)+'">+'orginData[n][m].value'+</p>';
+			//data[m]["label"]=n[m].value;
+		}
+		$("#js_opt"+k).html(str);
+	}
+}
+
+//组成数据
+function createData(orginData){
+	var n1,n2,n3,n4,index="",value,k;
+	var tempData=orginData["dataset"];
+	n1=$(".chart-area").val();
+	n2=$(".chart-index").val();
+	n3=$(".chart-class").val();
+	for(var i=0;i<j;i++){
+		if(i<10){
+			k="0"+i;
+		}else {
+			k=i;
+		}
+		index=""+n1+n2+n3+k;
+		if(tempData[index].length>0){//数据存在
+			value=tempData[index][0]["value"];
+			
+		} else {
+			value=0;
+		}
+		chartData["data"][i]["value"]=value;
+	}
+}
+
+//显示
+$(".icon-statistics").click(function(){
+	
+	$(".mod-schbox").hide();
+	$(".mod-static").show();
+	//初始化
+	createContion(searchresult)
+});
+function initStatistics(){
+	
 }
