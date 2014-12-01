@@ -370,6 +370,10 @@ padding: 0 15px 0 10px;
 border: 1px solid #e1976f;
 color: #e1976f;
 }
+/* 检索定位标识 */
+.list-condition  .loc-tag {
+background: #ecf2f9;
+}
 /* mod-index */
 .mod-index .part-choosearea {
 float: right;
@@ -418,6 +422,7 @@ padding: 0 25px 0 10px;
 font-size: 13px;
 background: url(../images/btn_dell.png) 90% center #fff no-repeat;
 margin-bottom: 8px;
+margin-right: 5px;
 cursor: pointer;
 }
 .choose-tt h2 {
@@ -539,6 +544,10 @@ text-align: center;
 .tb-rs tr {
 border-bottom: 1px solid #f7f7f7;
 }
+.tb-rs td {
+width: 100px;
+white-space: no-wrap;
+}
 .tb-rs .tb-rstt {
 font-weight: 700;
 border-bottom: 2px solid #f0f2f4; 
@@ -560,6 +569,7 @@ font-size: 12px;
 line-height: 24px;
 border: 1px solid #4f81bd;
 background: #fff;
+min-height: 150px;
 }
 .btn-dtreplace,.btn-dtreplace:link {
 font-weight: 700;
@@ -885,4 +895,108 @@ background-position: 9px 5px;
 .btn-pullindex {
 margin-top: 10px;
 background-position: 9px -25px;
+}
+/* todo */
+#dotcont_advchoose {
+width: 450px;
+height: 260px;
+}
+/* 自定义计算 */
+.btn-equal {
+display: inline-block;
+width: 30px;
+height: 30px;
+line-height: 30px;
+/* cursor: pointer; */
+background: url(../images/btn_equal.png) no-repeat;
+background-position: 5px 5px;
+}
+.btn-sure {
+display: inline-block;
+width: 60px;
+height: 30px;
+line-height: 30px;
+font-weight: 700;
+cursor: pointer;
+background:#4f81bd;
+color: #fff;
+text-align: center;
+}
+.part-self-calc1 {
+float: left;
+width: 260px;
+}
+.part-self-calc2 {
+float: left;
+width: 50px;
+text-align: center;
+}
+.part-self-calc3 {
+float: left;
+width: 270px;
+}
+.mod-selc-box {
+height: 140px;
+padding: 10px;
+margin-top: 10px;
+border: 1px solid #bbb;
+overflow-y: scroll;
+}
+.calc-box {
+height: 80px;
+padding: 10px;
+margin-bottom: 10px;
+border: 1px solid #bbb;
+}
+.tag-index {
+display: inline-block;
+width: 30%;
+line-height: 30px;
+text-align: center;
+cursor: pointer;
+}
+.calc-box .tag-index {
+width: auto;
+}
+.tag-operation {
+display: inline-block;
+width: 26px;
+height: 26px;
+line-height: 26px;
+cursor: pointer;
+background:#4f81bd;
+text-align: center;
+margin-bottom: 5px;
+margin-right: 5px;
+color: #fff;
+}
+.tag-del {
+width: 60px;
+}
+.calc-box .tag-operation {
+color: #333;
+background:#fff;
+}
+.txt-indexname {
+width: 240px;
+}
+.btn-calc {
+float: right;
+display: inline-block;
+width: 60px;
+line-height: 30px;
+text-align: center;
+border: none;
+color: #fff;
+background-color: #4f81bd;
+font-size: 12px;
+cursor: pointer;
+}
+.advcalc-con {
+padding: 15px;
+}
+.advcalc-tt {
+margin-right: 30px;
+font-size: 14px;
+font-family: Microsoft YaHei;
 }
