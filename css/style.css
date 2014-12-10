@@ -686,7 +686,7 @@ cursor: pointer;
 }
 .btn-f5 {
 display: inline-block;
-width: 30px;
+width: 40px;
 line-height: 30px;
 text-align: center;
 border: none;
@@ -694,7 +694,7 @@ color: #fff;
 background-color: #4f81bd;
 /* background-image: url(../images/btn_f5.png); */
 /* text-indent: -999em; */
-margin-left: 40px;
+margin-left: 65px;
 cursor: pointer;
 }
 .hidechart {
