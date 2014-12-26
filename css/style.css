@@ -302,6 +302,7 @@ color: #643120;
 }
 /*  */
 .mod-advsch {
+position: relative;
 width: 1000px;
 /* height: 282px; */
 margin: 0 auto;
@@ -310,6 +311,9 @@ border: 1px solid #4f81bd;
 }
 .choose-cd {
 height: 73px;
+}
+.choose-con {
+position: relative;
 }
 /* 地区 */
 .choose-opt {
@@ -336,6 +340,13 @@ margin: 9px -10px 7px;
 padding: 8px 10px 7px;
 border-top: 1px solid #a2bedf;
 border-bottom: 1px solid #a2bedf;
+}
+.part-choosearea.abs {
+position: absolute;
+background: #fff;
+width: 224px;
+top: 0;
+margin-top: 0;
 }
 .btn-locate {
 display: inline-block;
