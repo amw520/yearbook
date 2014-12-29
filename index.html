@@ -156,6 +156,7 @@ zoom: expression(function(ele){ele.style.zoom = "1";document.execCommand("Backgr
 					<a href="">帮助</a>
 				</p>
 		</footer>
+		<iframe id="ifm1" src="###"></iframe>
 		<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
 		<script type="text/javascript" src="js/dot/dot.js"></script>
 		<!-- <script type="text/javascript" src="js/index.js"></script> -->
@@ -164,5 +165,10 @@ zoom: expression(function(ele){ele.style.zoom = "1";document.execCommand("Backgr
 		<script type="text/javascript" src="js/visual/FusionCharts/FusionCharts.js"></script>
 		<script type="text/javascript" src="js/visual/FusionCharts/FusionCharts.jqueryplugin.js"></script>
 		<script type="text/javascript" src="js/visual/yearbookchart.js"></script>
+		<script type="text/javascript">
+		var src="http://172.18.84.43:9001/views/default/yearbook2.5/cross.html?height="+$(document).height();
+		$("#ifm1").attr("src",src);
+		console.log(top.window.location.host);
+		</script>
 </body>
 </html>
