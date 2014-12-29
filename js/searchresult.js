@@ -2,8 +2,8 @@
 $(document).ready(function () {
     //拖动元素
     $(".js_mod_move").each(function (index, elm) {
-        $(this).css({"position":"fixed","cursor":"pointer"});
-        moveDiv($(this), $(this));
+        $(this).css({"position":"fixed"});
+        moveDiv($(this), ".js_move");
     });
     
     $(document).delegate(".btn-dt-close", "click", function () {
@@ -71,7 +71,7 @@ var moveDiv0 = function (fdiv, title) {
     var posX;
     var posY;
     fdiv = $(fdiv).get(0);
-
+	
     $(fdiv).each(function (index, fmov) {
         fmov.onmousedown = function (e) {
             if (!e) e = window.event; //IE
@@ -96,12 +96,15 @@ var moveDiv0 = function (fdiv, title) {
         }
     });
 };
-var moveDiv = function(fdiv, title) {
+var moveDiv = function(fdiv, hitch) {
     var posX;
     var posY;
-    fdiv = $(fdiv).get(0);
+    var fdiv = $(fdiv).get(0);
+	var _hitch=$(fdiv).find(hitch);
+	if(!(_hitch.size()>0)) { _hitch=$(fdiv);}
+		$(_hitch).css({"cursor":"move"});
 
-    $(fdiv).each(function(index, fmov) {
+    _hitch.each(function(index, fmov) {
         fmov.onmousedown = function(e) {
             if (!e) e = window.event; //IE
             posX = e.clientX - parseInt(fdiv.offsetLeft);
