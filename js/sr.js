@@ -16,7 +16,7 @@ var validateDate = function () {
 					// "len": "0",
 					// "data": []
 					// };
-					var _type="", _num = 0,MAX_YEAR = 10,MAX_MONTH = 12,_tmpYear="",_tmpLen=0;
+					var _type="", _num = 0,MAX_YEAR = 9,MAX_MONTH = 11,_tmpYear="",_tmpLen=0,_tmpArr=[],_arr=[];
 					var rtnValue = true;
 					function init(type) {
 						if (typeof _type === undefined) {
@@ -35,6 +35,9 @@ var validateDate = function () {
 					this.getT=function(){
 						return _type;
 					}
+					this.getArr=function(){
+						return _arr;
+					}
 					this.setMAX_MONTH=function(num){
 						this.MAX_MONTH=num;
 					}
@@ -50,36 +53,92 @@ var validateDate = function () {
 						}
 						return getType() != type;
 					}
+					
+					//遍历年月
+					function getArrDate(year1,month1,year2,month2){//小年在前
+						var len,i,j=0,k=1,arr=[],str="";
+						for(j=0;j<year2-year1+1;j++){
+							for(k=1;k<13;k++){
+								if((j==0&&k<month1)||(j==(year2-year1)&&k>month2)){continue;}
+								str=(year1+j)+""+(k>9?k:("0"+k));
+								arr.push(str);
+							}
+						}
+						//console.log(arr);
+						return arr;
+					}
+					//遍历年
+					function getArrYear(year1,year2){
+						var arr=[],j;
+						for(j=year2-year1;j>-1;j--){
+								arr.push(year2-j);
+						}
+						return arr;
+					}
 					//验证年
-					function isYearOverflow(year1, year2) {
-						var len,i;
+					function isYearOverflow(year1, year2) {//小时间在前
+						var len,i,k,arr=[],dateArr;
 						for(i=arguments.length;i>0;i--){
 							arguments[i]=parseInt(arguments[i],10);
 						}
 						if (arguments.length > 1) {
-							len = year1 > year2 ? year1 - year2 : year2 - year1;
+							
+							dateArr=getArrYear(year1,year2);
+							
+							for(k=0;k<dateArr.length;k++){
+								if(_arr.indexOf(dateArr[i])!=-1){
+									//console.log("copy detected");
+									return true;
+								}
+							}
+							len = year2 - year1;
+							arr=arr.concat(dateArr);
+							
 						} else {
+							
+							
+							if(_arr.indexOf(arguments[0])!=-1){
+								//console.log("copy detected");
+								return true;
+							}
 							len = 1;
+							arr.push(arguments[0]);
 						}
 						//init("year");
 						_tmpLen=len;
+						_tmpArr=_tmpArr.concat(arr);
 						return len + _num > MAX_YEAR;
 
 					}
 					//验证月
 					function isMonthOverflow(year1, month1, year2, month2) {//小时间在前
-						var len,i;
+						var len,i,j,k=1,arr=[],str="",dateArr;
 						for(i=arguments.length;i>0;i--){
 							arguments[i]=parseInt(arguments[i],10);
 						}
 
 						if (arguments.length > 3) {
-							len = ((year1 - year2) * 12) - month1 + month2;
+							
+							dateArr=getArrDate(year1, month1, year2, month2);
+							for(k=0;k<dateArr.length;k++){
+								if(_arr.indexOf(dateArr[i])!=-1){
+									//console.log("copy detected");
+									return true;
+								}
+							}
+							len = ((year2 - year1) * 12) - month1 + month2;
+							arr=arr.concat(dateArr);
 						} else {
+							if(_arr.indexOf(arguments[0])!=-1){
+								//console.log("copy detected");
+								return true;
+							}
 							len = 1;
+							arr.push(arguments[0]);
 						}
 						//init("month");
 						_tmpLen=len;
+						_tmpArr=_tmpArr.concat(arr);
 						return len + _num > MAX_MONTH;
 					}
 					function doValidate() {
@@ -108,27 +167,67 @@ var validateDate = function () {
 					this.formatDate=function (datestr) {
 						datestr+="";
 						switch (datestr.length) {
-							case 4:
+							case 4://单一年
 								doValidate(datestr);
+								
 								break;
-							case 6:
+							case 6://单一年月
 								doValidate(datestr.slice(0, 4), datestr.slice(4), "month");
 								break;
-							case 9:
+							case 9://多年
 								doValidate(datestr.slice(0, 4), datestr.slice(5));
 								break;
-							case 13:
+							case 13://多个年月
 								doValidate(datestr.slice(0, 4), datestr.slice(4, 6), datestr.slice(7, 11), datestr.slice(11, 13));
 								break;
 						}
 						if(!rtnValue){//通过的值要进行存储
 							setType(_tmpYear);//种类
-							setNum(_tmpLen+getNum());
+							setNum((getNum()+_tmpArr.length));
+							_arr=_arr.concat(_tmpArr);
 						}
-						if(console){
-							console.log(getNum());
-							console.log(getType());
+						_tmpArr.length=0;
+						// if(console){
+							// console.log(getNum());
+							// console.log(getType());
+						// }
+						return rtnValue;
+					}
+					//删除
+					this.removeDate=function (datestr) {
+						var tmpDate=[];
+						datestr+="";
+						switch (datestr.length) {
+							case 4://单一年
+								//doValidate(datestr);
+								_arr.splice(datestr);
+								break;
+							case 6:
+								//doValidate(datestr.slice(0, 4), datestr.slice(4), "month");
+								_arr.splice(datestr);
+								break;
+							case 9://多年
+								//doValidate(datestr.slice(0, 4), datestr.slice(5));
+								tmpDate=getArrYear(datestr.slice(0, 4), datestr.slice(5));
+								_arr.splice(datestr);
+								break;
+							case 13:
+								//doValidate(datestr.slice(0, 4), datestr.slice(4, 6), datestr.slice(7, 11), datestr.slice(11, 13));
+								tmpDate=getArrDate(datestr.slice(0, 4), datestr.slice(4, 6), datestr.slice(7, 11), datestr.slice(11, 13));
+								_arr.splice(tmpDate);
+								break;
 						}
+						
+						if(1){//进行存储
+							if(_arr.length<1){
+								setType("");//种类
+							}
+							setNum(_arr.length);
+						}
+						// if(console){
+							// console.log(getNum());
+							// console.log(getType());
+						// }
 						return rtnValue;
 					}
 			//end
@@ -138,17 +237,6 @@ var validateDate = function () {
 	}
 
 }
-
-    //验证交叉日期
-// validateDate.prototype.isMixDate=function (type) {
-        // if (this.getType() == "") {
-            // return false;
-        // }
-        // return this.getType() == type ? false : true;
-    // }
-	// validateDate.prototype.year=10;
-	// validateDate.myear=15;
-
-
 var foo=new validateDate();
 var bar=new validateDate();
+
